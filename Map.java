@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 
 public class Map {
+   public static int SOLID = -1;
    private int myNumTilesWide, myNumTilesHigh,
                     myTileWidth, myTileHeight;
 
@@ -27,5 +28,30 @@ public class Map {
    }
    public int getNumTilesHigh() {
       return myNumTilesHigh;
+   }
+   
+   public class Tile {
+      private String myFileName;
+      private int myWeight;
+
+      public Tile(String fileName, int weight) {
+         myFileName = fileName;
+         myWeight = weight;
+      }
+
+      public void draw(Graphics pen, int x, int y,
+                            int width, int height) {}
+      public String getFileName() {
+         return myFileName;
+      }
+      public void setFileName(String fileName) {
+         myFileName = fileName;
+      }
+      public int getWeight() {
+         return myWeight;
+      }
+      public void setWeight(int weight) {
+         myWeight = weight;
+      }
    }
 }
